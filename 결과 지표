@@ -1,0 +1,59 @@
+
+[라벨 값 분포]
+label
+0    366963
+1     33037
+Name: count, dtype: int64
+
+[컬럼명(고유값 남았는지 확인)]
+Index(['destination port', 'flow duration', 'total fwd packets',
+       'total backward packets', 'total length of fwd packets',
+       'total length of bwd packets', 'fwd packet length max',
+       'fwd packet length min', 'fwd packet length mean',
+       'fwd packet length std', 'bwd packet length max',
+       'bwd packet length min', 'bwd packet length mean',
+       'bwd packet length std', 'flow bytes/s', 'flow packets/s',
+       'flow iat mean', 'flow iat std', 'flow iat max', 'flow iat min',
+       'fwd iat total', 'fwd iat mean', 'fwd iat std', 'fwd iat max',
+       'fwd iat min', 'bwd iat total', 'bwd iat mean', 'bwd iat std',
+       'bwd iat max', 'bwd iat min', 'fwd psh flags', 'bwd psh flags',
+       'fwd urg flags', 'bwd urg flags', 'fwd header length',
+       'bwd header length', 'fwd packets/s', 'bwd packets/s',
+       'min packet length', 'max packet length', 'packet length mean',
+       'packet length std', 'packet length variance', 'fin flag count',
+       'syn flag count', 'rst flag count', 'psh flag count', 'ack flag count',
+       'urg flag count', 'cwe flag count', 'ece flag count', 'down/up ratio',
+...
+       'idle std', 'idle max', 'idle min', 'label'],
+      dtype='object')
+
+[feature-label 상관계수 상위 10]
+Output is truncated. View as a scrollable element or open in a text editor. Adjust cell output settings...
+c:\Users\gudru\anaconda3\Lib\site-packages\numpy\lib\function_base.py:2897: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+c:\Users\gudru\anaconda3\Lib\site-packages\numpy\lib\function_base.py:2898: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+packet length variance    0.553822
+bwd packet length std     0.552401
+packet length std         0.523379
+bwd packet length max     0.504294
+bwd packet length mean    0.498238
+avg bwd segment size      0.498238
+max packet length         0.470693
+average packet size       0.465242
+packet length mean        0.453116
+idle std                  0.191661
+dtype: float64
+
+정확도: 0.9998582234565121
+분류 리포트:
+               precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00    109996
+           1       1.00      1.00      1.00      9911
+
+    accuracy                           1.00    119907
+   macro avg       1.00      1.00      1.00    119907
+weighted avg       1.00      1.00      1.00    119907
+
+ROC-AUC: 0.9997
